@@ -1,3 +1,167 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer{
+
+
+  &__inner{
+    padding-top: 40px;
+    padding-bottom: 18px;
+
+    @include respond-to(md){
+      padding: 75px 0px;
+    }
+  }
+
+  &__mobile-h3{
+    display: block !important;  
+  }
+
+  &__sign-up-wrap{
+
+    @include respond-to(md){
+      display: flex;
+    }
+
+    input{
+      width: 100%; 
+
+      @include respond-to(md){
+        width: calc(100% - 40px); 
+        margin-right: 20px;
+      }     
+    }
+
+    .btn-oval{
+      margin-top: 14px;
+      margin-bottom: 40px;
+
+      @include respond-to(md){
+        margin: 0px;
+      }
+    }
+  }
+
+  &__top-column:first-of-type{
+    grid-column: 1 / -1;
+    border-bottom: solid $brand-color;
+    border-width: 1px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 0px 20px;
+
+    @include respond-to(md){
+      width: 100%;
+      margin-left: 0px;
+      grid-column: auto;
+      border: none;
+    }
+  }
+
+  &__top-column:last-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(md){
+      display: block;
+    }
+  }
+
+  &__top{
+    display: grid;
+    grid-template-columns: 1.5fr 0.75fr 0.75fr;
+    grid-column-gap: 20px;
+
+    @include respond-to(md){
+      grid-template-columns: 1.5fr 0.75fr 0.75fr;
+      grid-column-gap: 66px;
+    }
+
+
+    h3{
+      display: none;
+      font-family: 'mabry-light';
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 10px;
+
+      @include respond-to(sm){
+        display: block;
+      }
+    }
+
+    p, li, a{
+      font-size: 14px;
+      font-family: 'mabry-regular';
+      padding-bottom: 16px;
+    }
+
+    ul{
+      padding-top: 40px;
+
+
+      @include respond-to(md){
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        max-height: 105px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__mobile-ecology{
+    margin-top: 51px;
+
+
+    @include respond-to(md){
+      display: none;
+    }
+  }
+
+  &__bottom{
+
+    @include respond-to(md){
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__bottom-column{
+    text-align: center;
+    padding-top: 40px;
+
+    p{
+      font-family: 'mabry-regular';
+      font-size: 14px;
+    }
+
+    @include respond-to(md){
+      text-align: left;
+
+      p{
+        margin-bottom: 18px;
+      }
+    }
+
+    &--desktop{
+      display: none;
+
+      p{
+        margin-bottom: 18px;
+        margin-right: 20px;
+        font-size: 12px;
+      }
+
+
+      @include respond-to(md){
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}

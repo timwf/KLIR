@@ -155,9 +155,114 @@ $(document).ready(() => {
     }
   }, 500);
 
+  function initPageBanner(){
+
+    const $bannerCopy = $('.page-banner__inner p')
+    let maxCount = $bannerCopy.length
+    let count = 0
+
+    $bannerCopy.first().addClass('active')
+    setInterval(changeCopy, 2000);
+
+    function changeCopy(){
+
+      //starts from zero index when reaches max length
+
+      if(count > maxCount-2){
+        $bannerCopy.first().addClass('active')
+        $bannerCopy.eq(count).removeClass('active')
+        count = 0;     
+        
+      }else{
+        count ++;
+        $bannerCopy.eq(count-1).removeClass('active')      
+        $bannerCopy.eq(count).addClass('active')
+      }    
+    }
+  }
+
+  function initHeader(){
+    const $hamburger = $('.header__hamburger')
+    const $mobMenu = $('.header__mobile')   
+    const $header = $('.header')
+    const $headerNav = $('.header__nav')
+
+    $hamburger.on('click', function(){
+
+      if($hamburger.hasClass('active')){
+        $mobMenu.removeClass('active')
+        $hamburger.removeClass('active')
+      }
+      else{
+        $hamburger.addClass('active')
+        $mobMenu.addClass('active')
+      }
+    })
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+      var st = $(this).scrollTop();
+
+      if(st > 10){
+        $header.addClass('active')
+      
+      }
+      else{
+        $header.removeClass('active')       
+      }
+
+
+      if (st > lastScrollTop){
+        $headerNav.removeClass('active')
+        $('.animated-border--desktop-only').css('opacity', '0')
+
+      } else {
+        $headerNav.addClass('active')
+ 
+        if($(window).width() > 1000){
+
+          $('.animated-border--desktop-only').delay(800 ).css('opacity', '1')
+        }
+
+      }
+      lastScrollTop = st;
+    });
+  }
+
+  function initFeaturedProduct(){
+    const $right = $('.featured-products__right')
+    const $left = $('.featured-products__left')
+
+
+    $right.on('mouseenter', function(){
+      $(this).find('.featured-products__image-show').hide()
+      $(this).find('.featured-products__image-hidden').show()
+    })
+
+    $right.on('mouseleave', function(){
+      $(this).find('.featured-products__image-show').show()
+      $(this).find('.featured-products__image-hidden').hide()
+    })
+
+    $left.on('mouseenter', function(){
+      $(this).find('.featured-products__image-show').hide()
+      $(this).find('.featured-products__image-hidden').show()
+    })
+
+    $left.on('mouseleave', function(){
+      $(this).find('.featured-products__image-show').show()
+      $(this).find('.featured-products__image-hidden').hide()
+    })
+  }
+
+
+
   /* FUNCTION CALLS */
   /* ============= */
   bindEvents();
+  initPageBanner()
+  initHeader()
+  initFeaturedProduct()
 
   if (isObserver) {
     $('.js-visibility').each((i, el) => {

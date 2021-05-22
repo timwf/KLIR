@@ -1,3 +1,32 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+
+
+@font-face { 
+  font-family: 'founders-grotesk-web-regular';
+  src:  url('../fonts/founders-grotesk-web-regular.woff') format('woff');
+}
+
+@font-face { 
+  font-family: 'mabry-bold';
+  src:  url('../fonts/mabry-bold.woff') format('woff');
+}
+
+@font-face { 
+  font-family: 'mabry-light';
+  src:  url('../fonts/mabry-light.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face { 
+  font-family: 'mabry-medium';
+  src:  url('../fonts/mabry-medium.woff') format('woff');
+}
+
+@font-face { 
+  font-family: 'mabry-regular';
+  src:  url('../fonts/mabry-regular.woff') format('woff');
+}
+
+

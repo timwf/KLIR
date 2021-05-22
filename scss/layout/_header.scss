@@ -1,13 +1,203 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-.page-header {
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+.header{
+  z-index: 998;
+  top: 28px;
+  position: fixed;
+  width: 100%;
 
-  &__logo {
+  &.active{
+    top: 0px;
+
+    svg{
+      height: 40px;
+      margin: 15px 0px;
+    }
+  }
+
+  &__main{
+    border-width: 1px;
+    z-index: 999;
+    background-color: white;
+    position: relative;
+  }
+
+  &__main-inner{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to(md){
+      justify-content: center;
+    }
+  }
+
+  &__hamburger{
+    position: absolute;
+    left: 0;
+    padding-left: 20px;
+    //top: 15px;
+
+    &.active{
+      .header__hambuger-line{
+        margin: 0;
+      }     
+
+      .header__hambuger-line:first-of-type{
+        transform: rotate(45deg);
+      }
+
+      .header__hambuger-line:nth-of-type(2){
+        display: none;
+      }
+
+      .header__hambuger-line:last-of-type{
+        transform: rotate(-45deg);
+      }      
+    }
+  }
+
+  &__hambuger-line{
+    width: 30px;
+    height: 1px;
+    background-color: #00205c;
+    margin: 8px 0px;
+    transform-origin: center;
+    transition: 0.4s;
+
+    @include respond-to(md){
+      display: none;
+    }
+  }
+
+  &__main-nav{
+    position: absolute;
+    right: 20px;
+    top: 17px;
+
+
+    @include respond-to(md){
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 24px;
+      padding-right: 20px;
+    }
+
+    ul{
+      display: flex;
+    }
+
+    li:first-child{
+      display: none;
+
+      @include respond-to(sm){
+        display: block;
+      }
+    }
+
+    li{
+      font-size: 12px;
+      margin-left: 46px;
+      letter-spacing: 1.6px;
+      font-family: 'mabry-light';
+
+
+      @include respond-to(sm){
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__logo {   
+
+    svg{
+      margin: 17px 0px;
+      height: 40px;
+      transition: 0.4s;
+
+      @include respond-to(md){
+        height: 93px;
+        margin: 24px 0px;
+      }
+    }    
+  }
+
+  &__nav{
+    display: none;
+
+    @include respond-to(md){
+      display: block;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      border-width: 1px;
+      background-color: white;
+      transform: translateY(-100%);
+      transition: 0.4s;
+
+      &.active{
+        transform: translateY(0%);
+      }
+    }
+
+    ul{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      li{
+        padding: 15px 56px;
+      }
+
+      a{
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-family: 'mabry-medium';
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__mobile{
+    padding: 40px 0px;
+    transform: translateY(-150%);
+    z-index: 99;
+    transition: 0.4s;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+
+
+    &.active{
+      transform: translateY(0%);
+    }
+
+    ul{
+      width: 100%;
+
+      li{
+        padding: 10px 20px;
+      }
+
+      a, li{
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-family: 'mabry-medium';
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .animated-border--desktop-only{
+    display: none;
+
+    @include respond-to(md){
+      display: block;
+    }
   }
 }

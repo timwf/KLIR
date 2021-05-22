@@ -51,7 +51,7 @@ gulp.task('scripts', () => {
 
 gulp.task('libs', () => {
   return gulp
-    .src(['./js/vendor/*.js', '!./js/vendor/jquery-3.3.1.min.js'])
+    .src(['./js/vendor/*.js', '!./js/vendor/jquery-3.3.1.min.js', '!./js/assets/marque.js'])
     .pipe(order(['ScrollMagic.min.js', '*.js']))
     .pipe(concat('libs.min.js'))
     .pipe(gulp.dest('./js/'))

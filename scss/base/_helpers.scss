@@ -24,6 +24,18 @@
   padding-left: 20px; /* 3 */
   padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
+
+  &--small{
+    max-width: 1250px;
+  }
+}
+
+.page-wrap{
+  margin-top: 56px;
+
+  @include respond-to(md){
+    margin-top: 196px;
+  }
 }
 
 /**
@@ -85,7 +97,7 @@ html.disable-scrolling {
 .is-observer {
   .reveal-slide {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(140px);
     @include transition-reveal;
   }
 
@@ -143,4 +155,22 @@ html.disable-scrolling {
       opacity: 1;
     }
   }
+}
+
+.animated-border{
+  width: 0%;
+  height: 1px;
+  background-color: $brand-color;
+  transition: width 0.9s;
+}
+
+.animated-border.is-visible{
+    width: 100%;
+    z-index: 9;
+    position: relative;
+
+    &.reveal-del-1,
+    .reveal-del-1 {
+      transition-delay: 0.1s;
+    }
 }

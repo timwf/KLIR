@@ -18,16 +18,78 @@ function theme_acf_blocks_init() {
 	// check function exists
 	if( function_exists('acf_register_block_type') ) {
 
-		// ******************* XXX Block *******************************
-		acf_register_block_type(array(
-			'name'				=> 'XXX',
-			'title'				=> __('XXX Block'),
-			'description'		=> __('XXX block'),
+
+    acf_register_block_type(array(
+			'name'				=> 'hero',
+			'title'				=> __('Hero'),
+			'description'		=> __('Hero'),
       'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/hero.php',
 			'icon'				=> 'align-center',
-			'keywords'			=> array( 'XXX' ),
+			'keywords'			=> array( 'hero'),
       'mode' 	=> 'edit',
-		));
+    ));
+
+    acf_register_block_type(array(
+			'name'				=> 'featured-products',
+			'title'				=> __('Featured Products'),
+			'description'		=> __('Featured Products'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/featured-products.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Featured Products'),
+      'mode' 	=> 'edit',
+    ));
+
+     acf_register_block_type(array(
+			'name'				=> 'image-text',
+			'title'				=> __('Image Text'),
+			'description'		=> __('Image Text'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/image-text.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Featured Products'),
+      'mode' 	=> 'edit',
+    ));
+
+    acf_register_block_type(array(
+			'name'				=> 'reviews',
+			'title'				=> __('Reviews'),
+			'description'		=> __('Image Text'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/reviews.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'reviews'),
+      'mode' 	=> 'edit',
+    ));
+
+    acf_register_block_type(array(
+			'name'				=> 'ticker-section',
+			'title'				=> __('Ticker Section'),
+			'description'		=> __('Ticker Section'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/ticker-section.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Ticker Section'),
+      'mode' 	=> 'edit',
+    ));
+
+    acf_register_block_type(array(
+			'name'				=> 'full-width-image',
+			'title'				=> __('Full width image'),
+			'description'		=> __('Full width image'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/full-width-image.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Full width image'),
+      'mode' 	=> 'edit',
+    ));
+
+    
+
+    
+
+    
   }
 }
 add_action('acf/init', 'theme_acf_blocks_init');
@@ -41,7 +103,16 @@ function theme_allowed_block_types($allowed_blocks, $post) {
   // }
 
   return array(
-    'acf/xxx',
+    'acf/hero',
+    'acf/featured-products',
+    'acf/image-text', 
+    'acf/reviews',   
+    'acf/ticker-section',   
+    'acf/full-width-image',  
+    
+
+    
+
   );
 }
 add_filter('allowed_block_types', 'theme_allowed_block_types', 10, 2);

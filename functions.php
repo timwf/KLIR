@@ -49,7 +49,9 @@ function theme_after_setup_theme() {
 
 	register_nav_menus( array(
     'header-menu' => esc_html__( 'Header Menu' ),
-    'footer-menu' => esc_html__( 'Footer Menu' )
+    'footer-menu' => esc_html__( 'Footer Menu' ),
+    'footer-menu-more-info' => esc_html__( 'Footer Menu More Info' ),
+    'footer-menu-social' => esc_html__( 'Social' ),
 	) );
 
   remove_image_size('1536x1536');
@@ -61,3 +63,11 @@ function theme_after_setup_theme() {
   add_image_size('extra-large', 1536);
   add_image_size('mega-large', 1920);
 }
+
+//woo support
+
+function klir_add_woocommerce_support() {
+  add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'klir_add_woocommerce_support' );

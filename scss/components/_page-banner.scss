@@ -1,0 +1,23 @@
+.page-banner{
+  height: 28px;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+
+  p{
+    font-size: 14px;
+    text-align: center;
+    font-family: 'mabry-light';
+    transform: translateY(100%);
+    transition: 0.4s;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    margin-top: 3.5px;
+
+    &.active{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

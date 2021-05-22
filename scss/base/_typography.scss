@@ -11,3 +11,35 @@ body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
+
+.text-link{
+  font-family: 'mabry-medium';
+  text-decoration: underline;
+  font-size: 13px;
+
+  @include respond-to(sm){
+    font-size: 14px;
+  }
+}
+
+
+.section-header{
+  font-family: 'mabry-regular';
+  font-size: 31px;
+  font-weight: 500;
+
+  @include respond-to(sm){
+    font-size: 35px;
+  }
+}
+
+.body-text{
+  font-family: 'founders-grotesk-web-regular';
+
+  font-size: 18px;
+
+  @include respond-to(sm){
+    font-size: 25px;
+  }
+
+}

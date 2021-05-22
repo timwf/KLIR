@@ -1,0 +1,123 @@
+.image-text{
+  position: relative;
+
+  &__inner{
+    display: flex;
+    position: relative; 
+    flex-direction: column;
+    height: 100%;
+
+    @include respond-to(sm){
+      flex-direction: row;
+    }
+
+    &--right{
+
+      @include respond-to(sm){
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__image-wrap{   
+    position: relative; 
+    padding-top: 110%;
+
+    @include respond-to(sm){
+      padding-top: 0%;
+    }
+
+    &--medium{
+
+      @include respond-to(sm){
+        width: 34%;
+      }
+
+      @include respond-to(xl){
+        width: 38%;
+      }
+    }
+
+    &--large{
+      padding-top: 70%;
+
+      @include respond-to(sm){
+        width: 50%;
+        padding-top: 0%;
+      }
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-bottom: solid $brand-color;
+      border-width: 1px;
+
+      @include respond-to(sm){
+        border: none;
+      }
+    }
+  }
+
+  &__copy-wrap{
+    padding: 20px;
+    
+    @include respond-to(sm){
+      padding: 37px 40px 73px 48px;
+    }
+
+
+    &--medium{
+
+      @include respond-to(sm){
+        width: 66%;
+      }
+
+
+      @include respond-to(xl){
+        width: 62%;
+      }
+    }
+
+    &--large{
+      @include respond-to(sm){
+        width: 50%;
+      }
+
+    }
+  }
+
+  p{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    max-width: 596px;
+    line-height: 1.3;
+
+    @include respond-to(sm){
+      padding-top: 204px;
+      padding-bottom: 50px;
+      max-width: 596px; 
+    }
+  }
+
+  a{
+    font-size: 13px;
+    font-family: 'mabry-regular';
+
+    @include respond-to(sm){
+      font-size: 18px;
+      font-family: 'mabry-medium';
+    }
+  }
+
+  &__copy-size-large{
+
+    @include respond-to(sm){
+      padding-top: 386px;
+    }
+
+  }
+}
