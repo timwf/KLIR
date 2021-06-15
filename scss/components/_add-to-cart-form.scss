@@ -1,0 +1,129 @@
+
+.add-to-cart-form{
+  position: relative;
+
+  &#mobile-form{
+
+    @include respond-to(md){
+     // display: none;
+    }
+  }
+
+  &#desktop-form{
+    //display: none;
+
+    @include respond-to(md){
+      display: block;
+    }
+  }
+
+  .wcsatt-options-wrapper{
+    //display: none;
+  }
+
+  .added_to_cart{
+   // display: none !important;
+  }
+
+
+  &__sub-btns{
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond-to(lg){
+      flex-wrap: nowrap;
+    }
+
+    .btn{
+      font-family: 'mabry-medium';
+      font-size: 16px;
+      padding: 17px 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400;
+
+      @include respond-to(lg){
+        width: 282px;
+      }
+
+      &.active{
+        background-color: $brand-color;
+        color: white;
+      }
+
+      span{
+        font-family: 'mabry-bold';
+      }
+    }
+
+    .btn--primary{
+      width: 268px;
+    }
+  }
+
+  .btn{
+    width: 100%;
+    z-index: 9;
+    margin-bottom: 11px;
+
+    @include respond-to(lg){
+      margin-bottom: 0px;
+    }
+  }
+
+  .subscription-btn{
+    background-color: white;
+
+    @include hover{
+      background-color: $brand-color;
+    }
+  }
+
+  &__hidden-sub-info{
+
+    display: none;
+
+    @include respond-to(lg){
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      background-color: $brand-color;
+      color: white;
+      max-height: 0px;
+      overflow: hidden;    
+      width: 50%;
+      padding: 10px 17px;
+      transition: 0.4s;
+    }
+
+
+    h5{
+      font-size: 13px;
+      font-family: 'mabry-bold';
+      margin-bottom: 10px;
+      margin-top: 0px;
+    }
+
+    p{
+      font-family: founders-grotesk-web-regular;
+      font-size: 14px;
+      margin: 0px;
+    }
+
+    &.active{
+
+      @include respond-to(lg){
+        top: -123px;
+        max-height: 200px;
+        padding: 10px 17px;
+        transition:  0.4s;
+      }
+    }
+  }
+}
+
+#bundle-dummy{
+  //display: none;
+}

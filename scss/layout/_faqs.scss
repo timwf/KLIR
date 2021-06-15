@@ -1,0 +1,59 @@
+.faqs{
+
+  &__inner{
+    padding-top: 96px;
+    padding-bottom: 130px;
+    max-width: 900px;
+
+    h1{
+      font-size: 40px;
+      font-family: 'mabry-bold';
+      max-width: 538px;
+      margin-bottom: 67px;
+
+      @include respond-to(sm){
+        font-size: 54px;
+      }
+    }
+
+    h4:first-of-type{
+      margin-top: 67px;
+    }
+
+    h4{
+      font-size: 40px;
+      font-family: 'mabry-bold';
+      border-bottom: solid $brand-color;
+      border-width: 1px;
+      margin-top: 97px;
+      padding-bottom: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .product-extra__accordian-title{
+    padding: 15px 0 15px;
+
+    @include respond-to(sm){
+      padding: 25px 0px 59px;
+    }
+
+    h3{
+      font-family: 'mabry-regular';
+      font-size: 32px;
+      width: 75%;
+    }
+  }
+
+  .product-extra__accordian-hidden{
+    padding: 0px;
+
+    p{
+      max-width: 638px;
+    }
+
+    &.active{
+      padding: 40px 0px 20px;
+    }
+  }
+}

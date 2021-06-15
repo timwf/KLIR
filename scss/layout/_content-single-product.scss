@@ -1,0 +1,753 @@
+.product-breadcrumbs{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  font-size: 20px;
+  font-family: 'mabry-medium';
+  text-transform: uppercase;
+}
+
+.product-main{
+  position: relative;
+
+
+  &__inner{
+    padding-top: 30px;
+
+    @include respond-to(md){
+      display: flex;
+      padding-top: 0px;
+    }
+
+  }
+
+  &__mobile-title{
+
+    h1{
+      font-size: 37px;
+      font-family: 'mabry-bold';
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    h2{
+      font-size: 33px;
+      font-family: 'mabry-light';
+      font-weight: 400;
+    }
+
+    span{
+      position: absolute;
+      left: 209px;
+      top: 2px;
+
+      svg{
+        height: 32px;
+      }
+    }
+  }
+
+  &__left{
+    position: relative;
+    padding-bottom: 1px;
+
+    @include respond-to(md){
+      width: 50%;
+    }
+  }
+
+  &__left-inner{
+    overflow: hidden;
+    padding-bottom: 22px;
+
+    @include respond-to(md){
+      padding-bottom: 0px;
+    }
+  }
+
+  &__right{
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    .btn-add-to-cart{
+
+      margin-top: 12px;
+
+      @include respond-to(md){
+        width: 100%;
+      }
+    }
+
+    h1{
+      font-family: 'mabry-bold';
+      font-size: 46px;
+      font-weight: 400;
+      position: relative;
+      text-transform: uppercase;
+      margin-bottom: -10px;
+
+      span{
+        position: absolute;
+        top: 4px;
+        left: 254px;
+
+        svg{
+          height: 38px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+
+    h2{
+      font-family: 'mabry-light';
+      font-size: 41px;
+      font-weight: 400;
+      position: relative;
+    }
+  }
+
+  &__exerpt{
+    max-height: 47px;
+    overflow: hidden;
+
+    @include respond-to(md){
+      max-height: none;
+    }
+  }
+
+  &__description{
+    font-family: 'founders-grotesk-web-regular';
+    font-size: 18px;
+    line-height: 1.3;
+    padding-top: 23px;
+    max-width: 454px;
+    margin-bottom: 37px;
+
+    @include respond-to(sm){
+      font-size: 20px;
+      margin-bottom: 43px;
+    }
+  }
+
+
+
+  &__right-bottom{
+    h2{
+
+      font-size: 16px;
+      font-weight: 400;
+      font-family: 'founders-grotesk-web-light';
+
+      @include respond-to(sm){
+        font-size: 22px;
+        font-family: 'founders-grotesk-web-light';
+      }
+    }
+
+    h4{
+      font-family: 'founders-grotesk-web-medium';
+      font-size: 14px;
+      margin-top: 8px;
+      font-weight: 400;
+      max-width: 385px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__nav{
+    position: absolute;
+    top: 40vw;
+    z-index: 99;
+    width: 100%;
+
+    @include respond-to(md){
+      top: 23vw;
+    }
+
+   .left{
+      left: 0px;
+      position: absolute;  
+      height: 25px;
+      
+      @include respond-to(md){
+        left: 47px;
+        height: 40px;
+      }
+      
+      @include hover{
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+
+    .right{
+      right: 0px;
+      position: absolute;
+      height: 25px;
+      
+      @include respond-to(md){
+        right: 47px;
+        height: 40px;
+      }
+      
+      
+      @include hover{
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .swiper-pagination{
+    top: 82vw;
+
+    @include respond-to(md){
+      top: 42vw;
+    }
+
+    @include respond-to(xl){
+      bottom: 80px;
+      top: 38vw;
+    }
+  }
+
+  .swiper-pagination-bullet{
+    width: 11px;
+    height: 11px;
+    background-color: white;
+    border: solid $brand-color;
+    border-width: 1px;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: $brand-color;
+  }
+
+
+  &__right{
+    position: relative;
+
+    .animated-border-vert{
+      position: absolute !important; 
+      top: 0;
+    }
+  }
+
+  &__right-inner{
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    @include respond-to(md){
+      padding: 33px 63px 16px;
+    }
+
+    @include respond-to(lg){
+      max-width: 677px;
+    }
+  }
+
+
+  &__duo-selection{
+    display: flex;
+
+    .btn{
+      width: 100%;
+      font-size: 35px;
+      font-family: 'mabry-regular';
+      border-bottom: none;
+
+      @include respond-to(sm){
+        width: 50%;
+      }
+
+      &.active{
+        background-color: $brand-color;
+        color: white;
+      }
+    }
+
+    .btn:first-of-type{
+      border-right: none;
+    }
+  }
+
+  &__ingredients-title{
+    border-top: solid $brand-color;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 63px;
+
+    @include hover{
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    p{
+      font-size: 35px;
+      font-family: 'mabry-regular';
+    }
+
+    svg{
+      transition: 0.4s;
+
+      path{
+        opacity: 1;
+        transition: 0.4s;
+      }
+
+      &.active{
+        //transform: rotate(45deg);
+
+        path:last-of-type{
+          opacity: 0;
+        }
+      }
+    }
+
+    
+  }
+
+  &__ingredients-hidden{
+    margin: 0px 63px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    margin-top: 0px;
+    font-family: founders-grotesk-web-regular;
+    font-size: 20px;
+    line-height: 1.3;
+    opacity: 0;
+
+    &.active{
+      max-height: 500px;
+      margin: 20px 63px;
+      margin-top: -5px;
+      opacity: 1;
+    }
+  }
+
+  &__ingredients-hidden-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid $brand-color;
+    border-width: 1.5px;
+    font-size: 16px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+  }
+
+  &__ingredient-row{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid $brand-color;
+    border-width: 1px;
+    p{
+      font-size: 16px;
+    }
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}
+
+.level-up-data{
+  display: block;
+}
+
+.unwind-data{
+  display: none;
+}
+
+
+
+
+.product-extra{
+  &__inner{
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include respond-to(md){
+      flex-direction: row;
+    }
+  }
+
+  &__left{
+
+    position: relative;
+
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    .animated-border-vert{
+      position: absolute !important;
+      top: 0;
+      right: -1px;
+    }
+  }
+
+  &__right{
+
+
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    .animated-border-vert{
+      position: absolute !important;
+      top: 0;
+    }
+
+    .animated-border{
+      position: absolute !important;
+      left: 0;
+    }
+  }
+
+  &__right-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+   // left: -1px;
+
+   .product-extra__grid-item-wrap:nth-of-type(odd){  
+      .animated-border-vert{
+        display: none;
+      }
+    }
+
+    @include respond-to(sm){
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .product-extra__grid-item-wrap:nth-of-type(odd){  
+        .animated-border-vert{
+          display: block;
+        }
+      }
+
+      .product-extra__grid-item-wrap:nth-of-type(1), .product-extra__grid-item-wrap:nth-of-type(4){  
+        .animated-border-vert{
+          display: none;
+        }
+      }
+    }
+
+    @include respond-to(md){
+      .product-extra__grid-item-wrap:nth-of-type(odd){  
+        .animated-border-vert{
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__grid-item-wrap{
+    padding-top: 100%;
+    position: relative;
+  }
+
+  &__grid-item-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      text-align: center;
+      padding-top: 15px;
+      font-family: 'mabry-medium';
+      font-size: 12px;
+
+      @include respond-to(sm){
+        font-size: 15px;
+      }
+    }
+
+    svg{
+
+
+      @include respond-to(sm){
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__grid-svg-wrap{
+    height: 85px;
+    display: flex;
+    align-items: center;
+
+    @include respond-to(sm){
+      height: 104px;
+    }
+  }
+
+  &__accordian-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 36px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    @include respond-to(md){
+      padding: 0 36px 40px;
+    }
+
+    @include hover{
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    h2{
+      font-family: 'mabry-regular';
+      font-size: 31px;
+      font-weight: 400;
+      padding-right: 10px;
+
+      @include respond-to(lg){
+        font-size: 35px;
+      }
+    }
+
+    svg{
+      transition: 0.4s;
+
+      path{
+        opacity: 1;
+        transition: 0.4s;
+      }
+
+      &.active{
+        //transform: rotate(45deg);
+
+        path:last-of-type{
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__accordian-hidden{
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    padding: 0px 36px;
+    opacity: 0;
+    margin-top: 0px;
+    font-family: founders-grotesk-web-regular;
+    font-size: 20px;
+    line-height: 1.3;
+
+    &.active{
+      max-height: 900px;
+      padding: 20px 36px;
+      opacity: 1;
+
+      @include respond-to(lg){
+        margin-top: -80px;
+        min-height: 80px;
+      }
+    }
+  }
+}
+
+
+
+
+.complete-the-set{
+  
+  margin-bottom: 15px;
+
+  @include respond-to(md){
+    margin-top: 53px;
+  }
+
+  &__section-header{
+    max-width: 1280px;
+    padding: 0px 20px;
+    margin: auto;
+    border-bottom: solid $brand-color;
+    border-width: 1px;
+
+    @include respond-to(md){
+      border-bottom: none;
+    }
+
+    h2{
+      font-size: 31px;
+      font-family: 'mabry-regular';
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-weight: 400;
+
+      @include respond-to(md){
+        font-size: 35px;
+        margin-bottom: 40px;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  &__inner{
+
+    max-width: 1280px;
+    padding: 0px 20px;
+    margin: auto;
+
+    @include respond-to(md){
+      display: flex;
+    }
+  }
+
+  &__copy{
+    p{
+      display: none;
+
+      @include respond-to(md){     
+        display: block;  
+      }
+    }
+
+    &--mobile{
+      margin-bottom: 20px;
+
+      h2{
+        font-size: 37px;
+        font-family: 'mabry-bold';
+        margin-top: 20px;
+      }
+
+      h3{
+        font-size: 33px;
+        font-family: 'mabry-light';
+        margin-bottom: 20px;
+      }
+
+      h4{
+        font-size: 16px;
+        font-family: 'founders-grotesk-web-light';
+      }
+
+
+      @include respond-to(md){
+        display: none;
+      }
+    }
+
+    &--desktop{
+      display: none;
+
+      @include respond-to(md){
+        display: block;
+      }
+    }
+  }
+
+  &__left{
+
+    @include respond-to(md){
+      width: 50%;
+      padding-right: 24px;
+    }
+  }
+
+  &__right{
+
+    @include respond-to(md){
+      width: 50%;
+      padding-left: 24px;
+    }
+
+    .complete-the-set__copy--mobile{
+      h2{
+        display: none;
+      }
+
+      h3{
+        display: none;
+      }
+
+      h4{
+        display: none;
+      }
+
+      p{
+        display: block;
+      }
+    }
+    
+
+    h2{
+      font-size: 46px;
+      font-family: 'mabry-bold';
+      font-weight: 400;
+      margin-bottom: -10px;
+      max-width: 518px;
+    }
+
+    h3{
+      font-size: 41px;
+      font-family: 'mabry-light';
+      font-weight: 400;
+      max-width: 518px;
+    }
+
+    p{
+      font-family: 'founders-grotesk-web-regular';
+      font-size: 20px;
+      max-width: 518px;
+      margin-top: 34px;
+      margin-bottom: 34px;
+    }
+
+    h4{
+      font-family: 'founders-grotesk-web-light';
+      font-size: 27px;
+      font-weight: 400;
+    }
+
+    h5{
+      font-size: 14px;
+      font-weight: 400;
+      font-family: 'mabry-medium';
+      margin-bottom: 14px;
+      margin-top: 34px;
+    }
+
+    .btn-add-to-cart{
+      width: 100%;
+      margin-top: 9px;
+      font-size: 16px;
+
+      @include respond-to(lg){
+        width: 564px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

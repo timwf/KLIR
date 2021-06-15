@@ -1,0 +1,80 @@
+.sustainability-logos{
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  @include respond-to(sm){
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  &__inner{
+
+    h2{
+      font-size: 32px;
+      text-align: center;
+      font-family: 'mabry-bold';
+    }
+
+    p{
+      font-size: 25px;
+      font-family: 'founders-grotesk-web-regular';
+      text-align: center;
+      max-width: 862px;
+      margin: auto;
+      margin-top: 19px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin:auto;
+
+    @include respond-to(sm){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
+    @include respond-to(sm){
+      margin-bottom: 0px;
+    }
+
+    h4{
+      font-size: 24px;
+      font-family: 'mabry-bold';
+      margin-top: 32px;
+    }
+
+    p{
+      font-size: 15px;
+      font-family: 'mabry-regular';
+      margin: 0;
+    }
+
+    @include respond-to(sm){
+
+      &:after{
+        content: "";
+        width: 1px;
+        height: 56px;
+        position: absolute;
+        right: 0px;
+        top: calc(50% - 23px);
+        background-color: $brand-color;
+      }
+
+      &:last-of-type:after{
+        display: none;
+      }
+    }
+  }
+}

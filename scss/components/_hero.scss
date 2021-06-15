@@ -90,18 +90,18 @@
         position: absolute;
         top: 0; 
         right: -0px;
-        height: 70vw;
+        height: 49vw;
         max-height: 738px;
       }
 
       @include respond-to(lg){
-        right: -40px;
+        right: -65px;
       }
       
 
 
       @include respond-to(xl){
-        right: -100px;
+        right: -158px;
       }
     }
   }

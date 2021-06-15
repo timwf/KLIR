@@ -1,0 +1,51 @@
+.page-hero{
+  height: calc(100vh - 106px);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  @include respond-to(sm){
+    height: 600px;
+  }
+
+  @include respond-to(xl){
+    height: calc(100vh - 234px);
+  }
+
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h1{
+      font-size: 48px;
+      font-family: 'mabry-bold';
+      color: white;
+      text-align: center;
+    }
+
+    h2{
+      font-size: 48px;
+      font-family: 'mabry-light';
+      color: white;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+  &__scroll{
+    position: absolute;
+    width: 100%;
+
+    .btn-oval{
+      position: absolute;
+      bottom: 36px;
+      right: 36px;
+      border-color: white;
+      color: white;
+    }
+  }
+}

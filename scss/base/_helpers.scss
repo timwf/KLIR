@@ -31,12 +31,15 @@
 }
 
 .page-wrap{
-  margin-top: 56px;
+  margin-top: 79px;
+  background-color: #00205c00;
+  transition: 0.4s;
 
   @include respond-to(md){
-    margin-top: 196px;
+    margin-top: 183px;
   }
 }
+
 
 /**
  * Hide text while making it readable for screen readers
@@ -92,6 +95,22 @@ html.disable-scrolling {
     height: 100%;
   }
 }
+
+
+.animated-border{
+  width: 100%;
+  height: 1px;
+  background-color: $brand-color;
+  transition: width 0.9s;
+}
+
+.animated-border-vert{
+  height: 100%;
+  z-index: 9;
+  position: relative;
+}
+
+
 
 /* Scroll reveal */
 .is-observer {
@@ -155,8 +174,8 @@ html.disable-scrolling {
       opacity: 1;
     }
   }
-}
 
+  
 .animated-border{
   width: 0%;
   height: 1px;
@@ -174,3 +193,126 @@ html.disable-scrolling {
       transition-delay: 0.1s;
     }
 }
+
+
+.animated-border-vert{
+  width: 1px;
+  height: 0%;
+  background-color: $brand-color;
+  transition: height 0.9s;
+}
+
+.animated-border-vert.is-visible{
+    height: 100%;
+    z-index: 9;
+    position: relative;
+
+    &.reveal-del-1,
+    .reveal-del-1 {
+      transition-delay: 0.3s;
+    }
+  }
+}
+
+.desktop-only{
+  display: none;
+
+  @include respond-to(md){
+    display: block;
+  }
+}
+
+.mobile-only{
+  @include respond-to(md){
+    display: none;
+  }
+}
+
+
+.page-wrap--dark{
+
+  background-color: $brand-color;
+  color: white;
+
+  a{
+    color: white;
+  }
+
+  .animated-border-vert{
+    background-color: white;
+  }
+
+  .animated-border{
+    background-color: white;
+  }
+
+  svg{
+    path{
+      stroke: white ;
+    }
+  }
+
+  .btn{
+    border: 1px solid white;
+    color: white;
+
+    @include hover{
+      background-color: white;
+      color: $brand-color;
+    }
+
+    &.active{
+      background-color: white !important;
+      color: $brand-color !important;
+    }
+  }
+
+  .svg-blue{
+    stroke: $brand-color
+  }
+
+  .product-main__ingredients-title{
+    border-top: 1px solid #ffffff;
+  }
+
+  .swiper-pagination-bullet{
+
+    background-color: $brand-color !important;
+    border: solid white !important;
+    border-width: 1px !important;
+
+  }
+
+  .swiper-pagination-bullet-active{
+    height: 12px;
+    width: 12px;
+    background-color: white !important;
+  }
+
+  .subscription-btn{
+    background-color: $brand-color !important;
+
+    @include hover{
+      background-color: white !important;
+    }
+  }
+
+  .add-to-cart-form__hidden-sub-info{
+    background-color: white !important;
+    color: $brand-color !important;
+  }
+
+  .product-main__right h1 span{
+    left: 220px !important;
+  }
+
+  .product-main__ingredient-row, .product-main__ingredients-hidden-title{
+    border-color: white;
+  }
+
+
+}
+
+
+
+

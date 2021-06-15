@@ -3,9 +3,11 @@
   $svg = get_field('svg');
   $copy = get_field('copy');  
   $button = get_field('button');
+  $dark = get_field('dark');
+  
 ?>
 
-<section class="ticker-section">
+<section class="ticker-section <?php if($dark){echo 'ticker-section--dark';} ?>">
   <div id="marquee" class="ticker-section__ticker">
     <div class="marquee">
       <div class="track">

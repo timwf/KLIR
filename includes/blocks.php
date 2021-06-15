@@ -31,6 +31,17 @@ function theme_acf_blocks_init() {
     ));
 
     acf_register_block_type(array(
+			'name'				=> 'page-hero',
+			'title'				=> __('Page Hero'),
+			'description'		=> __('Page Hero'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/page-hero.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'page-hero'),
+      'mode' 	=> 'edit',
+    ));
+
+    acf_register_block_type(array(
 			'name'				=> 'featured-products',
 			'title'				=> __('Featured Products'),
 			'description'		=> __('Featured Products'),
@@ -85,6 +96,42 @@ function theme_acf_blocks_init() {
       'mode' 	=> 'edit',
     ));
 
+    acf_register_block_type(array(
+			'name'				=> 'sustainabilty-logos',
+			'title'				=> __('Sustainabilty Logos'),
+			'description'		=> __('Sustainabilty Logos'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/sustainabilty-logos.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Sustainabilty Logos'),
+      'mode' 	=> 'edit',
+    ));
+
+    acf_register_block_type(array(
+			'name'				=> 'header-copy',
+			'title'				=> __('Header Copy'),
+			'description'		=> __('Header Copy'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/header-copy.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Header Copy'),
+      'mode' 	=> 'edit',
+    ));
+
+    acf_register_block_type(array(
+			'name'				=> 'image-with-text-box',
+			'title'				=> __('Image With Text Box'),
+			'description'		=> __('Image With Text Box'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/image-with-text-box.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'Image With Text Box'),
+      'mode' 	=> 'edit',
+    ));
+
+
+    
+    
     
 
     
@@ -109,10 +156,14 @@ function theme_allowed_block_types($allowed_blocks, $post) {
     'acf/reviews',   
     'acf/ticker-section',   
     'acf/full-width-image',  
+    'acf/page-hero',
+    'acf/sustainabilty-logos',   
+    'acf/full-width-image',  
+    'acf/page-hero',
+    'acf/header-copy',  
+    'acf/image-with-text-box', 
     
-
     
-
   );
 }
 add_filter('allowed_block_types', 'theme_allowed_block_types', 10, 2);

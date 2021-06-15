@@ -1,0 +1,77 @@
+.image-text-box{
+  margin-bottom: 120px;
+
+  &__inner{
+    position: relative;
+  }
+
+  &__image-wrap{
+
+    img{
+      height: 86vw;
+      object-fit: cover;
+
+      @include respond-to(sm){
+        position: absolute;
+        height: 100%;
+        width: 70%;
+      }
+    }
+
+    & .Right{
+
+      img{
+        right: 20px;
+      }
+    }
+  }
+
+  &__text-wrap{
+
+
+    @include respond-to(sm){
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__text-inner{
+    max-width: 520px;
+    padding: 25px;
+    position: relative; 
+    z-index: 99;
+
+    @include respond-to(sm){
+      padding: 45px;
+    }
+
+    border: solid black;
+    border-width: 1px;
+
+    &.left{
+
+      @include respond-to(sm){
+        margin-right: 0px;
+        margin-left: auto;
+      }
+    }
+
+    h2{
+      padding-bottom: 30px;
+      max-width: 215px;
+      font-size: 24px;
+      font-family: 'mabry-regular';
+
+      @include respond-to(sm){
+        padding-bottom: 117px;
+      }
+    }
+
+    p{
+      font-size: 18px;
+      font-family: 'founders-grotesk-web-regular';
+      padding-bottom: 10px;
+      padding-top: 23px;
+    }
+  }
+}

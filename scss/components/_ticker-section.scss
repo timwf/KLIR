@@ -49,7 +49,7 @@
     position: absolute;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 162s linear infinite;
+    animation: marquee 80s linear infinite;
   }
   
   @keyframes marquee {
@@ -63,6 +63,32 @@
     @include respond-to(sm){
       width: 523px;
       margin-bottom: 83px;
+    }
+  }
+
+  &--dark{
+    background-color: $brand-color;
+    color: white;
+
+    svg{
+      circle, path, line{
+        stroke: white;
+      }
+    }
+
+    .btn{
+      border: 1px solid white;
+      color: white;
+  
+      @include hover{
+        background-color: white;
+        color: $brand-color;
+      }
+  
+      &.active{
+        background-color: white !important;
+        color: $brand-color !important;
+      }
     }
   }
 }

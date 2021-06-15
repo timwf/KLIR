@@ -1,0 +1,133 @@
+.shop-fly{
+  position: fixed;
+  top: 0;
+  width: 720px;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: 0.4s;
+
+  &.active{
+    transform: translateX(0%);
+  }
+
+  &__top{
+    border-bottom: solid $brand-color;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 42px;
+
+    h2{
+      font-size: 42px;
+      font-family: 'mabry-regular';
+    }
+  }
+
+  &__close{
+    padding: 24px 0px;
+
+    @include hover{
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  &__close-icon{
+    width: 42px;
+    height: 2px;
+    background-color: $brand-color;
+  }
+
+  &__inner{
+    height: 100%;
+  }
+
+  &__body{
+    padding: 23px 42px;
+    overflow-y: scroll;
+    height: 100%;
+    padding-bottom: 100px;
+    height: calc(100vh - 105px);
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__singles{
+    display: flex;
+  }
+
+  &__singles-item{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a{
+      margin-top: -50px;
+      z-index: 9;
+    }
+  }
+
+  &__singles-detals{
+    width: 100%;
+    padding: 0px 25px;
+
+    h4{
+      font-size: 26px;
+      font-family: 'mabry-bold';
+      font-weight: 400;
+    }
+
+    .btn{
+      width: 100%;
+      text-transform: uppercase;
+      padding: 9px 40px;
+      margin-top: 10px;
+    }
+  }
+
+  &__singles-detals-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: solid $brand-color;
+    border-bottom: solid $brand-color;
+    border-width: 1px;
+    align-items: center;
+    justify-content: space-between;
+
+    h4{
+      font-size: 31px;
+      font-family: 'mabry-bold';
+      border-right: solid $brand-color;
+      border-width: 1px;
+      width: 67%;
+      padding: 0px 0 3px;
+      font-weight: 400;
+    }
+
+    p{
+      font-size: 10px;
+      width: 33%;
+      font-family: 'mabry-regular';
+      padding: 0px 13px;
+      text-transform: uppercase;      
+    }
+  }
+
+  &__divider{
+    border-bottom: solid $brand-color;
+    border-width: 1px;
+    padding-top: 48px;
+    width: calc(100% + 84px);
+    margin-left: -42px;
+  }
+}

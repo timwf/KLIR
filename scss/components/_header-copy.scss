@@ -1,0 +1,28 @@
+.header-copy{
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  @include respond-to(sm){
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  &__inner{
+
+    h2{
+      font-size: 32px;
+      text-align: center;
+      font-family: 'mabry-bold';
+    }
+
+    p{
+      font-size: 25px;
+      font-family: 'founders-grotesk-web-regular';
+      text-align: center;
+      max-width: 862px;
+      margin: auto;
+      margin-top: 19px;
+      margin-bottom: 30px;
+    }
+  }
+}

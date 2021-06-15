@@ -15,7 +15,7 @@
       <p class="body-text"><?php echo $copy ?></p>
       <a class="hero__button no-opacity" href="<?php echo $buttonLink['url']?>">
           <button class="btn btn--primary"><?php echo $buttonLink['title']?></button>
-        </a>        
+      </a>        
     </div>
     <div class="hero__right ">
       <img class="" src="<?php  echo $image['url'] ?>" alt="">

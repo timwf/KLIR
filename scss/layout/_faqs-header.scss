@@ -1,0 +1,21 @@
+.faqs-header{
+  background-color: #F4F4F4;
+
+  &__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+
+    P{
+      font-size: 20px;
+      font-family: 'mabry-medium';
+      padding: 0px 26px;
+
+      @include hover{
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+  }
+}

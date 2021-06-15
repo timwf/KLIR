@@ -105,6 +105,10 @@
       letter-spacing: 1.6px;
       font-family: 'mabry-light';
 
+      @include hover{
+        cursor: pointer;
+      }
+
 
       @include respond-to(sm){
         font-size: 16px;
@@ -121,7 +125,7 @@
 
       @include respond-to(md){
         height: 93px;
-        margin: 24px 0px;
+        margin: 17px 0px;
       }
     }    
   }
@@ -151,7 +155,8 @@
       justify-content: center;
 
       li{
-        padding: 15px 56px;
+        //padding: 15px 29px;
+        padding: 8px 29px 13px;
       }
 
       a{
@@ -175,6 +180,8 @@
 
     &.active{
       transform: translateY(0%);
+      overflow: scroll;
+      height: 100vh;
     }
 
     ul{

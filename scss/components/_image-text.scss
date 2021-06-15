@@ -106,6 +106,7 @@
   a{
     font-size: 13px;
     font-family: 'mabry-regular';
+    text-transform: uppercase;
 
     @include respond-to(sm){
       font-size: 18px;

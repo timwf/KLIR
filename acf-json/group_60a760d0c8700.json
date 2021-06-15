@@ -20,6 +20,25 @@
             "esc_html": 0
         },
         {
+            "key": "field_60b9e47df5a57",
+            "label": "Dark?",
+            "name": "dark",
+            "type": "true_false",
+            "instructions": "Will turn background dark, text white.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_60a7631f79078",
             "label": "Ticker text",
             "name": "ticker_text",
@@ -116,5 +135,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1621582696
+    "modified": 1622795569
 }
